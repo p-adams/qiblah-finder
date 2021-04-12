@@ -1,6 +1,7 @@
-import { MapContainer, TileLayer, Polyline } from "react-leaflet";
+import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
+import GeodesicPolyline from "./GeodesicPolyline";
 
 const position = [35.5485, -121.9886];
 
@@ -21,12 +22,7 @@ function App() {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Polyline
-            positions={[
-              [35.5485, -121.9886],
-              [21.422487, 39.826206],
-            ]}
-          />
+          <GeodesicPolyline />
         </MapContainer>
       </main>
       <footer />
